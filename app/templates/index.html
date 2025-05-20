@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Clicker
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h1 class="card-title display-5">🎯 Clicker Game</h1>
+                <p class="card-text fs-5">
+                    Количество кликов: <strong>{{ current_user.clicks }}</strong>
+                </p>
+                <p class="text-muted">Нажмите кнопку, чтобы увеличить счётчик:</p>
+                <a href="{{ url_for('clicks') }}" class="btn btn-success btn-lg">
+                    ➕ Кликнуть
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
